@@ -1,0 +1,40 @@
+.curve-line {
+   transform: rotate(220deg);
+   top: 0;
+   right: -220px;
+   width: 600px;
+}
+
+.bg-gradient-login {
+   background-color: #4e73df;
+   background: linear-gradient(90deg, rgba(22, 69, 207, 1) 0%, rgba(12, 132, 241, 1) 100%);
+   background-size: cover;
+}
+
+.container-login {
+   height: 100vh;
+   width: 100%;
+   overflow-x: hidden;
+}
+
+.bg-login-image {
+   background: url("../img/login-image.jpg");
+   background-position: center;
+   background-size: cover;
+}
+.input-data-siswa {
+   display: inline-flex;
+   align-items: center;
+}
+
+.input-data-siswa .input-group {
+   margin-right: 20px;
+}
+.input-data-siswa .input-group label {
+   margin-bottom: 0;
+}
+.form-select {
+   margin-left: 10px;
+   border-radius: 10px;
+   padding: 5px 10px;
+}

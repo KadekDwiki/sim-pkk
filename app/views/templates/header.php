@@ -15,6 +15,7 @@
 
       <!-- Custom styles for this template-->
       <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/sb-admin-2.min.css" />
+      <link rel="stylesheet" href="<?= BASE_URL ?>/assets/vendor/datatables/dataTables.bootstrap4.min.css" />
       <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/style.css" />
    </head>
    <body id="page-top">

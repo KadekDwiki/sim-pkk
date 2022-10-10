@@ -9578,6 +9578,9 @@ a:focus {
    .sidebar .sidebar-brand .sidebar-brand-icon i {
       font-size: 2rem;
    }
+   .sidebar .sidebar-brand .sidebar-brand-icon .icon-image {
+      width: 50px !important;
+   }
    .sidebar .sidebar-brand .sidebar-brand-text {
       display: inline;
    }
@@ -9632,6 +9635,9 @@ a:focus {
    }
    .sidebar.toggled .sidebar-brand .sidebar-brand-icon i {
       font-size: 2rem;
+   }
+   .sidebar.toggled .sidebar-brand {
+      justify-content: center !important;
    }
    .sidebar.toggled .sidebar-brand .sidebar-brand-text {
       display: none;

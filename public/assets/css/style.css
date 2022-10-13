@@ -38,3 +38,7 @@
    border-radius: 10px;
    padding: 5px 10px;
 }
+
+.topbar .nav-item .nav-link {
+   height: auto;
+}

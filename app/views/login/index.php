@@ -5,7 +5,8 @@
       <div class="p-5 col-lg-10">
          <div class="text-center">
             <img src="<?= BASE_URL ?>/assets/img/logo skensa.png" alt="" class="w-25 mb-3" />
-            <h1 class="h2 text-gray-900 mb-4">Welcome back!</h1>
+            <h1 class="text-gray-900 mb-2">Selamat Datang!</h1>
+            <p class="mb-4">Sistem Informasi Sekolah SMK Negeri 1 Denpasar</p>
          </div>
          <form class="user">
             <div class="form-group">
@@ -17,9 +18,9 @@
             <a href="<?= BASE_URL ?>/admin/" class="btn btn-primary btn-user btn-block"> Login </a>
          </form>
          <hr />
-         <div class="text-center">
+         <!-- <div class="text-center">
             <a class="small" href="forgot-password.html">Forgot Password?</a>
-         </div>
+         </div> -->
       </div>
    </div>
 </div>

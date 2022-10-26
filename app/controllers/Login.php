@@ -9,4 +9,12 @@ class Login extends Controller
       $this->view('login/index', $data);
       $this->view('templates/footer', $data);
    }
+
+   public function checkLogin(){
+      if ($this->model("Auth")->login($_POST) == "berhasil") {
+         return $this->redirect("/");
+      }else {
+         return $this->redirect("/login");
+      }
+   }
 }

@@ -18,77 +18,29 @@
                                           <th>No.</th>
                                           <th>Nis</th>
                                           <th>Nama</th>
+                                          <th>Email</th>
+                                          <th>Jenis Kelamin</th>
                                           <th>Tanggal Lahir</th>
                                           <th>Nomor Telepon</th>
                                           <th>Alamat</th>
                                        </tr>
                                  </thead>
-                                 <!-- <tfoot>
-                                       <tr>
-                                          <th>No.</th>
-                                          <th>Nis</th>
-                                          <th>Nama</th>
-                                          <th>Tanggal Lahir</th>
-                                          <th>Nomor Telepon</th>
-                                          <th>Alamat</th>
-                                          <th>Action</th>
-                                       </tr>
-                                 </tfoot> -->
                                  <tbody>
+                                    <?php
+                                    $i = 1;
+                                    foreach($data["datakelas"] as $data){ ?>
                                        <tr>
-                                          <td>1</td>
-                                          <td>28840</td>
-                                          <td>I Kadek Dwiki Nusanjaya</td>
-                                          <td>2011/04/25</td>
-                                          <td>+6288219334678</td>
-                                          <td>Jl. Gamias</td>
-                                             
+                                          <td><?= $i++ ?></td>
+                                          <td><?= $data["username"] ?></td>
+                                          <td><?= $data["name"] ?></td>
+                                          <td><?= $data["email"] ?></td>
+                                          <td><?= $data["jenis_kelamin"] ?></td>
+                                          <td><?= $data["tgl_lahir"] ?></td>
+                                          <td><?= $data["no_telp"] ?></td>
+                                          <td><?= $data["alamat"] ?></td>
                                        </tr>
-                                       <tr>
-                                          <td>2</td>
-                                          <td>28841</td>
-                                          <td>I Kadek Dwiki</td>
-                                          <td>2011/04/26</td>
-                                          <td>+6288219334679</td>
-                                          <td>Jl. Gamias sibanggede abiansemal</td>
-                                             
-                                       </tr>
-                                       <tr>
-                                          <td>3</td>
-                                          <td>28842</td>
-                                          <td>I Nusanjaya</td>
-                                          <td>2011/04/27</td>
-                                          <td>+6288219334670</td>
-                                          <td>Jl. Gamias</td>
-                                             
-                                       </tr>
-                                       <tr>
-                                          <td>4</td>
-                                          <td>28843</td>
-                                          <td>I Nusanjaya putra</td>
-                                          <td>2011/04/28</td>
-                                          <td>+6288219334671</td>
-                                          <td>Jl. Gamias kesiman denpasar timur</td>
-                                             
-                                       </tr>
-                                       <tr>
-                                          <td>5</td>
-                                          <td>28844</td>
-                                          <td>I Putu Eka</td>
-                                          <td>2011/04/30</td>
-                                          <td>+6288219334672</td>
-                                          <td>Jl. Yudistira Cabe Darmasaba</td>
-                                             
-                                       </tr>
-                                       <tr>
-                                          <td>6</td>
-                                          <td>28845</td>
-                                          <td>Ni Dwi Kedua</td>
-                                          <td>2011/04/27</td>
-                                          <td>+6288219334670</td>
-                                          <td>Jl. Penuh dengan kenangan</td>
-                                             
-                                       </tr>
+                                    <?php  } ?>
+                                       
                                  </tbody>
                               </table>
                            </div>

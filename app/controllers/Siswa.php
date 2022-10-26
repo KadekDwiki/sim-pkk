@@ -1,28 +1,28 @@
 <?php
 
 class Siswa extends Controller{
-   //  public function __construct()
-   //  {
-   //      if (!isset($_SESSION["login"])) {
-   //          header("Location:" . BASE_URL . "/login");
-   //          exit;
-   //      }
-   //  }
-    public function index()
-    {   
-        $data['title'] = 'Dashboard | Siswa';
-        $data['name'] = $this->model('User_model')->getUser();
-
-        $this->view('templates/header', $data);
-        $this->view('templates/sidebar', $data);
-        $this->view('templates/navbar', $data);
-        $this->view('siswa/index', $data);
-        $this->view('templates/footer');
+    public function __construct()
+    {
+        if (!isset($_SESSION["login"])) {
+            $this->redirect("/login");
+        }
     }
+    // public function index()
+    // {   
+    //     $data['title'] = 'Dashboard | Siswa';
+    //     $data['name'] = $this->model('User_model')->getUser();
+
+    //     $this->view('templates/header', $data);
+    //     $this->view('templates/sidebar', $data);
+    //     $this->view('templates/navbar', $data);
+    //     $this->view('siswa/index', $data);
+    //     $this->view('templates/footer');
+    // }
     public function anggotakelas()
-    {   
-        $data['title'] = 'data anggota kelas';
-        $data['name'] = $this->model('User_model')->getUser();
+    {  
+        $data['user'] = $this->model('User_model')->getUserById($_SESSION["user_id"]);
+        $data['datakelas'] = $this->model('User_model')->getUserByClass($data["user"]["kelas"]);
+        $data['title'] = "Anggota Kelas | " . $data["user"]["kelas"];
 
         $this->view('templates/header', $data);
         $this->view('templates/sidebar', $data);
@@ -30,4 +30,5 @@ class Siswa extends Controller{
         $this->view('siswa/data-anggota-kelas', $data);
         $this->view('templates/footer');
     }
+
 }

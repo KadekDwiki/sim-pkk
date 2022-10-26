@@ -18,7 +18,7 @@
                
                <li class="nav-item dropdown no-arrow border-start border-left pl-3">
                   <a class="nav-link dropdown-toggle text-end" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     <span class="mr-3 d-none d-lg-inline text-gray-600 small"><?= $data["name"] ?></span>
+                     <span class="mr-3 d-none d-lg-inline text-gray-600 small"><?= $data["user"]["name"] ?></span>
                      <img class="img-profile rounded-circle" src="<?= BASE_URL ?>/assets/img/undraw_profile.svg" />
                   </a>
                   <!-- Dropdown - User Information -->
@@ -36,7 +36,7 @@
                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                         Logout
                      </a> -->
-                     <a class="dropdown-item" href="<?= BASE_URL ?>/login">
+                     <a class="dropdown-item" href="<?= BASE_URL ?>/logout">
                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                         Logout
                      </a>

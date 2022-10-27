@@ -1,20 +1,22 @@
                <div class="container-fluid col-lg-12">
-                  <a href="<?= BASE_URL ?>/admin/datasiswa" class="mb-5">Back</a>
-               <h1 class="h3 mb-2 text-gray-800 text-capitalize mt-3">tambah data siswa </h1>
-               <form class="my-4 d-flex" method="POST" action="<?= BASE_URL ?>/admin/addsiswa">
+               <a href="<?= BASE_URL ?>/admin/datasiswa" class="mb-5">Back</a>
+               <h1 class="h3 mb-2 text-gray-800 text-capitalize mt-3">edit data siswa </h1>
+               <?= $data['datasiswa']['password'] ?>
+               <form class="my-4 d-flex" method="POST" action="<?= BASE_URL ?>/admin/updatesiswa/<?= $data['datasiswa']['id'] ?>">
                   <div class="col-lg-6">
                      <input type="text" value="siswa" name="level" hidden>
+                     <input type="text" value="<?= $data['datasiswa']['id'] ?>" name="id" hidden>
                      <div class="mb-3">
                         <label for="input-nis" class="form-label">NIS</label>
-                        <input type="text" name="nis" class="form-control" id="input-nis">
+                        <input type="text" name="nis" class="form-control" id="input-nis" value="<?= $data['datasiswa']['username'] ?>">
                      </div>
                      <div class="mb-3">
                         <label for="input-nama" class="form-label">Nama Lengkap</label>
-                        <input type="text" name="name" class="form-control" id="input-nama">
+                        <input type="text" name="name" class="form-control" id="input-nama" value="<?= $data['datasiswa']['name'] ?>">
                      </div>
                      <div class="mb-3">
                         <label for="input-email" class="form-label">Email</label>
-                        <input type="email" name="email" class="form-control" id="input-email">
+                        <input type="email" name="email" class="form-control" id="input-email" value="<?= $data['datasiswa']['email'] ?>">
                      </div>
                      <div class="mb-3">
                         <label for="input-nama" class="form-label">Kelas</label>
@@ -27,13 +29,25 @@
                      <div class="mb-3">
                         <label for="input-jeniskelamin" class="form-label">Jenis Kelamin</label>
                         <div class="form-check">
-                           <input class="form-check-input" type="radio" value="Laki-laki" name="jenis_kelamin" id="flexRadioDefault1" checked>
+                           <input class="form-check-input" type="radio" value="Laki-laki" name="jenis_kelamin" id="flexRadioDefault1" 
+                           <?php
+                           if ($data['datasiswa']['jenis_kelamin'] == "Laki-laki") {
+                              echo "checked";
+                           }
+                           ?>
+                           >
                            <label class="form-check-label" for="flexRadioDefault1">
                               Laki-laki
                            </label>
                            </div>
                            <div class="form-check">
-                           <input class="form-check-input" type="radio" value="Perempuan" name="jenis_kelamin" id="flexRadioDefault2">
+                           <input class="form-check-input" type="radio" value="Perempuan" name="jenis_kelamin" id="flexRadioDefault2" 
+                           <?php
+                           if ($data['datasiswa']['jenis_kelamin'] == "Perempuan") {
+                              echo "checked";
+                           }
+                           ?>
+                           >
                            <label class="form-check-label" for="flexRadioDefault2">
                               Perempuan
                            </label>
@@ -43,25 +57,25 @@
                   <div class="col-lg-6">
                      <div class="mb-3">
                         <label for="input-tanggallahir" class="form-label">Tanggal Lahir</label>
-                        <input type="date" name="tgl_lahir" class="form-control" id="input-tanggallahir">
+                        <input type="date" name="tgl_lahir" class="form-control" id="input-tanggallahir" value="<?= $data['datasiswa']['tgl_lahir'] ?>">
                      </div>
                      <div class="mb-3">
                         <label for="input-telp" class="form-label">Nomor Telepon</label>
-                        <input type="text" name="no_telp" class="form-control" id="input-telp">
+                        <input type="text" name="no_telp" class="form-control" id="input-telp" value="<?= $data['datasiswa']['no_telp'] ?>">
                      </div>
                      <div class="mb-3">
                         <label for="input-telportu" class="form-label">Nomor Telepon Orang Tua/Wali</label>
-                        <input type="text" name="no_telportu" class="form-control" id="input-telportu">
+                        <input type="text" name="no_telportu" class="form-control" id="input-telportu" value="<?= $data['datasiswa']['no_telportu'] ?>">
                      </div>
                      <div class="mb-3">
                         <label for="input-alamat" class="form-label">Alamat</label>
-                        <textarea type="text" name="alamat" class="form-control" id="input-alamat" style="height: 90px"></textarea>
+                        <textarea type="text" name="alamat" class="form-control" id="input-alamat" style="height: 90px"><?= $data['datasiswa']['alamat'] ?></textarea>
                      </div>
                      <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+                        <input type="password" name="password" class="form-control" id="exampleInputPassword1" value="<?= $data['datasiswa']['password'] ?>">
                      </div>
-                     <button type="submit" name="password" class="btn btn-primary">Submit</button>
+                     <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
                </form>
             </div>

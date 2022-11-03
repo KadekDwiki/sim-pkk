@@ -60,7 +60,7 @@
    <!-- cek user guru -->
    <?php if ($data["user"]["level"] == "guru") { ?>
       <li class="nav-item">
-         <a class="nav-link" href="<?= BASE_URL ?>/admin/datasiswa">
+         <a class="nav-link" href="<?= BASE_URL ?>/siswa/datasiswa">
             <i class="fas fa-fw fa-users"></i>
             <span>Siswa</span>
          </a>

@@ -3,7 +3,7 @@
 class Admin extends Controller{
     public function __construct()
     {
-        if (!isset($_SESSION["login"])) {
+        if (!isset($_SESSION["login"]) || $_SESSION["level"] !== "admin") {
             $this->redirect("/login");
         }
     }

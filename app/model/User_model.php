@@ -29,7 +29,7 @@ class User_model
    }
 
    public function countUser($level){
-      $this->db->query("SELECT COUNT(level) FROM users WHERE level = :level");
+      $this->db->query("SELECT COUNT(level) FROM {$this->table} WHERE level = :level");
       $this->db->bind("level", $level);
 
       return $this->db->resultSingle();

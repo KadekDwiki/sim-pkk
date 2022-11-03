@@ -1,7 +1,7 @@
 <?php 
 
 class App {
-    protected $controller = "Admin",
+    protected $controller = "Dashboard",
             $method = "index",
             $params = [];
 

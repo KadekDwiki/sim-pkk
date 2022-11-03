@@ -3,7 +3,7 @@
 
 <!-- Page Heading -->
 <h1 class="h3 mb-2 text-gray-800">Data Kelas</h1>
-<p class="mb-4">Ini data kelas SKENSA</p>
+<p class="mb-4">Ini Data Kelas SMKN 1 Denpasar</p>
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
@@ -19,8 +19,10 @@
                         <th>Nomer Ruangan</th>
                         <th>Nama Kelas</th>
                         <th>Wali Kelas</th>
+                        <th>Edit / Hapus</th>
                      </tr>
                </thead>
+               <tbody>
                <!-- <tfoot>
                      <tr>
                         <th>No.</th>
@@ -34,61 +36,101 @@
                         <td>1</td>
                         <td>101</td>
                         <td>RPL</td>
-                        <td>Guy Hawkins S.Kom.</td>
+                        <td>Guy Hawkins S.Kom.</td>  
+                      <td>
+                      <a href=""><i class="fas fa-edit fa-lg mr-2 text-warning"></i></a>
+                      <a href=""><i class="fas fa-trash fa-lg text-danger"></i></a>
+                      <td>
                      </tr>
                      <tr>
                         <td>2</td>
                         <td>102</td>
                         <td>MM</td>
                         <td>Jane Cooper S.Pd.</td>
-                     </tr>
-                     <tr>
+                        <td>
+                        <a href=""><i class="fas fa-edit fa-lg mr-2 text-warning"></i></a>
+                        <a href=""><i class="fas fa-trash fa-lg text-danger"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
                         <td>3</td>
                         <td>103</td>
                         <td>TKRO</td>
                         <td>Wade Warren S.Kom.</td>
+                     <td>
+                     <a href=""><i class="fas fa-edit fa-lg mr-2 text-warning"></i></a>
+                     <a href=""><i class="fas fa-trash fa-lg text-danger"></i></a>
+                      </td>
                      </tr>
                      <tr>
                         <td>4</td>
                         <td>104</td>
                         <td>TBSM</td>
                         <td>Esther Howard S.Kom.</td>
+                     <td>
+                     <a href=""><i class="fas fa-edit fa-lg mr-2 text-warning"></i></a>
+                     <a href=""><i class="fas fa-trash fa-lg text-danger"></i></a>
+                     </td>
                      </tr>
                      <tr>
                         <td>5</td>
                         <td>105</td>
                         <td>TP</td>
                         <td>Cameron Wiliamson S.Pd.</td>
+                     <td>
+                     <a href=""><i class="fas fa-edit fa-lg mr-2 text-warning"></i></a>
+                     <a href=""><i class="fas fa-trash fa-lg text-danger"></i></a>
+                     </td>
                      </tr>
                      <tr>
                         <td>6</td>
                         <td>106</td>
                         <td>TKJ</td>
                         <td>Brooklyn Simmons S.Pd.</td>
+                        <td>
+                     <a href=""><i class="fas fa-edit fa-lg mr-2 text-warning"></i></a>
+                     <a href=""><i class="fas fa-trash fa-lg text-danger"></i></a>
+                     </td>
                      </tr>
                      <tr>    
                         <td>7</td>
                         <td>107</td>
                         <td>TITL</td>
                         <td>Leslie Alexander S.Kom.</td>
+                     <td>
+                     <a href=""><i class="fas fa-edit fa-lg mr-2 text-warning"></i></a>
+                     <a href=""><i class="fas fa-trash fa-lg text-danger"></i></a>
+                     </td>
                      </tr>
                      <tr>    
                         <td>8</td>
                         <td>108</td>
                         <td>TPTU</td>
                         <td>Jenny Wilson S.Pd.</td>
+                     <td>
+                     <a href=""><i class="fas fa-edit fa-lg mr-2 text-warning"></i></a>
+                     <a href=""><i class="fas fa-trash fa-lg text-danger"></i></a>
+                     </td>
                      </tr>
                      <tr>    
                         <td>9</td>
                         <td>109</td>
                         <td>DPIB</td>
                         <td>Guy Hawkins S.Kom.</td>
+                     <td>
+                     <a href=""><i class="fas fa-edit fa-lg mr-2 text-warning"></i></a>
+                     <a href=""><i class="fas fa-trash fa-lg text-danger"></i></a>
+                      </td>
                      </tr>
                      <tr>    
                         <td>10</td>
                         <td>110</td>
                         <td>BKP</td>
                         <td>Wilson Maringa S.Kom.</td>
+                       <td>
+                       <a href=""><i class="fas fa-edit fa-lg mr-2 text-warning"></i></a>
+                       <a href=""><i class="fas fa-trash fa-lg text-danger"></i></a>
+                       </td>
                      </tr>
                </tbody>
             </table>

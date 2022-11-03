@@ -39,7 +39,7 @@
       </a>
    </li>
    <li class="nav-item">
-      <a class="nav-link" href="#">
+      <a class="nav-link" href="<?= BASE_URL?>/kelas">
          <i class="fas fa-fw fa-school"></i>
          <span>Kelas</span>
       </a>

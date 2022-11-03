@@ -10,4 +10,9 @@ class Controller {
         require_once "../app/model/" . $model . ".php";
         return new $model;
     }
+
+    public function redirect($url){
+        header("Location:" . BASE_URL . $url);
+        exit;
+    }
 }

@@ -8,14 +8,14 @@
             <h1 class="text-gray-900 mb-2">Selamat Datang!</h1>
             <p class="mb-4">Sistem Informasi Sekolah SMK Negeri 1 Denpasar</p>
          </div>
-         <form class="user">
+         <form class="user" method="POST" action="<?= BASE_URL ?>/login/checkLogin">
             <div class="form-group">
-               <input type="text" class="form-control form-control-user" id="inputUsername" placeholder="Enter Username..." />
+               <input type="text" name="username" class="form-control form-control-user" id="inputUsername" placeholder="Enter Username..." />
             </div>
             <div class="form-group">
-               <input type="password" class="form-control form-control-user" id="inputPassword" placeholder="Password" />
+               <input type="password" name="password" class="form-control form-control-user" id="inputPassword" placeholder="Password" />
             </div>
-            <a href="<?= BASE_URL ?>/admin/" class="btn btn-primary btn-user btn-block"> Login </a>
+            <button type="submit" name="submit" class="btn btn-primary btn-user btn-block"> Login </button>
          </form>
          <hr />
          <!-- <div class="text-center">

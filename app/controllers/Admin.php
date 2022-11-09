@@ -79,4 +79,19 @@ class Admin extends Controller{
             $this->redirect("/admin/datasiswa");
         }
     }
+
+    // kelas
+    public function datakelas()
+    {   
+        $data['user'] = $this->model('User_model')->getUserById($_SESSION["user_id"]);
+        $data['title'] = "Data Kelas | " . $data['user']['level'];
+
+        $this->view('templates/header', $data);
+        $this->view('templates/sidebar', $data);
+        $this->view('templates/navbar', $data);
+        $this->view('kelas/index', $data);
+        $this->view('templates/footer');
+    }
+
+
 }

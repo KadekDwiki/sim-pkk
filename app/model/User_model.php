@@ -27,4 +27,18 @@ class User_model
 
       return $this->db->resultAll();
    }
+
+   public function countUser($level){
+      $this->db->query("SELECT COUNT(level) FROM {$this->table} WHERE level = :level");
+      $this->db->bind("level", $level);
+
+      return $this->db->resultSingle();
+   }
+
+   public function countKelas(){
+      $this->db->query("SELECT COUNT(kode_kelas) FROM kelas");
+      return $this->db->resultSingle();
+   }
+
+
 }

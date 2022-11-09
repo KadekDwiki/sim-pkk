@@ -3,21 +3,10 @@
 class Siswa extends Controller{
     public function __construct()
     {
-        if (!isset($_SESSION["login"])) {
+        if (!isset($_SESSION["login"]) || $_SESSION["level"] !== "siswa") {
             $this->redirect("/login");
         }
     }
-    // public function index()
-    // {   
-    //     $data['title'] = 'Dashboard | Siswa';
-    //     $data['name'] = $this->model('User_model')->getUser();
-
-    //     $this->view('templates/header', $data);
-    //     $this->view('templates/sidebar', $data);
-    //     $this->view('templates/navbar', $data);
-    //     $this->view('siswa/index', $data);
-    //     $this->view('templates/footer');
-    // }
     public function anggotakelas()
     {  
         $data['user'] = $this->model('User_model')->getUserById($_SESSION["user_id"]);

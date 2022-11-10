@@ -87,7 +87,8 @@ class Admin extends Controller{
     public function datakelas()
     {   
         $data['user'] = $this->model('User_model')->getUserById($_SESSION["user_id"]);
-        $data['title'] = "Data Kelas | " . $data['user']['level'];
+        $data['title'] = "Dashboard | " . $data['user']['level'];
+        $data['data'] = $this->model('Kelas_model')->getAllKelas();
 
         $this->view('templates/header', $data);
         $this->view('templates/sidebar', $data);

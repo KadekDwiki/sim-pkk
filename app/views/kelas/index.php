@@ -4,7 +4,7 @@
 <!-- Page Heading -->
 <h1 class="h3 mb-2 text-gray-800">Data Kelas</h1>
 <p class="mb-4">Ini Data Kelas SMKN 1 Denpasar</p>
-
+<?php $data['data'] ?>
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
    <div class="card-header py-3">
@@ -22,7 +22,7 @@
                         <th>Edit / Hapus</th>
                      </tr>
                </thead>
-               <tbody>
+               <!-- <tbody> -->
                <!-- <tfoot>
                      <tr>
                         <th>No.</th>
@@ -32,7 +32,26 @@
                      </tr>
                </tfoot> -->
                <tbody>
+                  <?php if( $data['data'] > 0 ) {?>
+                     <?php
+                     $no = 1;
+                     foreach( $data['data'] as $data) :
+                     ?>
                      <tr>
+                        <td><?= $no++ ?></td>
+                        <td><?= $data['kode_kelas'] ?></td>
+                        <td><?= $data['nama'] ?></td>
+                        <td><?= $data['wali_kelas'] ?></td>  
+                        <td><?= $data['jurusan'] ?></td>
+                      <td>
+                      <a href=""><i class="fas fa-edit fa-lg mr-2 text-warning"></i></a>
+                      <a href=""><i class="fas fa-trash fa-lg text-danger"></i></a>
+                      <td>
+                     </tr>
+                     <?php  endforeach; ?>
+                  <?php }?>
+                     
+                     <!-- <tr>
                         <td>1</td>
                         <td>101</td>
                         <td>RPL</td>
@@ -131,7 +150,7 @@
                        <a href=""><i class="fas fa-edit fa-lg mr-2 text-warning"></i></a>
                        <a href=""><i class="fas fa-trash fa-lg text-danger"></i></a>
                        </td>
-                     </tr>
+                     </tr> -->
                </tbody>
             </table>
          </div>

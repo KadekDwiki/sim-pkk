@@ -32,7 +32,6 @@
                                           <th>Tanggal Lahir</th>
                                           <th>Nomor Telepon</th>
                                           <th>Alamat</th>
-                                          <th width="80">Action</th>
                                        </tr>
                                  </thead>
                                  <tbody>
@@ -48,10 +47,6 @@
                                           <td><?= $data["tgl_lahir"] ?></td>
                                           <td><?= $data["no_telp"] ?></td>
                                           <td><?= $data["alamat"] ?></td>
-                                          <td>
-                                             <a href="<?= BASE_URL ?>/admin/editsiswa/<?= $data['id'] ?>"><i class="fas fa-edit fa-lg mr-2 text-warning"></i></a>
-                                             <a href="<?= BASE_URL ?>/admin/deletesiswa/<?= $data['id'] ?>"><i class="fas fa-trash fa-lg text-danger"></i></a>
-                                          </td>
                                        </tr>
                                     <?php  } ?>
                                  </tbody>

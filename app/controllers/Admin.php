@@ -82,4 +82,30 @@ class Admin extends Controller{
             $this->redirect("/admin/datasiswa");
         }
     }
+
+    public function dataguru()
+    {   
+        $data['user'] = $this->model('User_model')->getUserById($_SESSION["user_id"]);
+        $data['title'] = "Data Siswa | " . $data['user']['level'];
+        // $data['datakelas'] = $this->model('User_model')->getUserByClass("XII RPL 1");
+
+        $this->view('templates/header', $data);
+        $this->view('templates/sidebar', $data);
+        $this->view('templates/navbar', $data);
+        $this->view('guru/index', $data);
+        $this->view('templates/footer');
+    }
+
+    public function datakelas()
+    {   
+        $data['user'] = $this->model('User_model')->getUserById($_SESSION["user_id"]);
+        $data['title'] = "Data Siswa | " . $data['user']['level'];
+        // $data['datakelas'] = $this->model('User_model')->getUserByClass("XII RPL 1");
+
+        $this->view('templates/header', $data);
+        $this->view('templates/sidebar', $data);
+        $this->view('templates/navbar', $data);
+        $this->view('kelas/index', $data);
+        $this->view('templates/footer');
+    }
 }

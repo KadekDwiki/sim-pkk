@@ -36,13 +36,13 @@
          </a>
       </li>
       <li class="nav-item">
-         <a class="nav-link" href="#">
+         <a class="nav-link" href="<?= BASE_URL ?>/admin/dataguru">
             <i class="fas fa-fw fa-users"></i>
             <span>Guru</span>
          </a>
       </li>
       <li class="nav-item">
-         <a class="nav-link" href="#">
+         <a class="nav-link" href="<?= BASE_URL ?>/admin/datakelas">
             <i class="fas fa-fw fa-school"></i>
             <span>Kelas</span>
          </a>
@@ -66,7 +66,7 @@
          </a>
       </li>
       <li class="nav-item">
-         <a class="nav-link" href="#">
+         <a class="nav-link" href="<?= BASE_URL ?>/guru/dataguru">
             <i class="fas fa-fw fa-users"></i>
             <span>Guru</span>
          </a>

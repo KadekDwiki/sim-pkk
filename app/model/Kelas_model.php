@@ -1,9 +1,9 @@
 <?php
 
-class Siswa_Model
+class Kelas_model
 {
-    private $table = 'kelas',
-            $db;
+    private $table = 'kelas';
+    private $db;
 
    public function __construct()
    {
@@ -11,8 +11,7 @@ class Siswa_Model
    }
 
    public function getAllKelas() {
-    $this->db->query("SELECT * FROM {$this->db}");
-    // $this->db->execute();
+    $this->db->query("SELECT * FROM {$this->table}");
     return $this->db->resultAll();
    }
 

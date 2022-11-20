@@ -1,4 +1,4 @@
-               <div class="container-fluid col-lg-12">
+                  <div class="container-fluid col-lg-12">
                <a href="<?= BASE_URL ?>/admin/datasiswa" class="mb-5">Back</a>
                <h1 class="h3 mb-2 text-gray-800 text-capitalize mt-3">edit data siswa </h1>
                <?= $data['datasiswa']['password'] ?>

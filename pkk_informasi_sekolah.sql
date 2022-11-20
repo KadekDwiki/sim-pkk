@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 02, 2022 at 12:56 AM
+-- Generation Time: Nov 20, 2022 at 05:50 AM
 -- Server version: 5.7.33
 -- PHP Version: 8.1.12
 
@@ -30,7 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `kelas` (
   `id` int(11) NOT NULL,
   `kode_kelas` varchar(11) NOT NULL,
-  `nama` varchar(100) NOT NULL,
+  `nama_kelas` varchar(100) NOT NULL,
+  `nomor_ruangan` varchar(20) NOT NULL,
   `wali_kelas` varchar(255) NOT NULL,
   `jurusan` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -39,8 +40,9 @@ CREATE TABLE `kelas` (
 -- Dumping data for table `kelas`
 --
 
-INSERT INTO `kelas` (`id`, `kode_kelas`, `nama`, `wali_kelas`, `jurusan`) VALUES
-(1, 'XII RPL 1', 'XII Rekayasa Perangkat Lunak 1', 'XII RPL 1', '');
+INSERT INTO `kelas` (`id`, `kode_kelas`, `nama_kelas`, `nomor_ruangan`, `wali_kelas`, `jurusan`) VALUES
+(1, 'XII RPL 1', 'XII Rekayasa Perangkat Lunak 1', '', 'XII RPL 1', 'Rekayasa Perangkat Lunak'),
+(2, 'XII RPL 2', 'XII Rekayasa Perangkat Lunak 2', '', 'buk anu', 'Rekayasa Perangkat Lunak');
 
 -- --------------------------------------------------------
 
@@ -55,14 +57,14 @@ CREATE TABLE `users` (
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `kelas` varchar(11) DEFAULT NULL,
-  `wali_kelas` varchar(100) DEFAULT NULL,
+  `wali_kelas` varchar(11) DEFAULT NULL,
   `jurusan` varchar(100) DEFAULT NULL,
   `no_telp` varchar(20) NOT NULL,
   `no_telportu` varchar(20) DEFAULT NULL,
   `tgl_lahir` varchar(20) NOT NULL,
   `jenis_kelamin` varchar(20) NOT NULL,
   `alamat` text NOT NULL,
-  `password` varchar(20) NOT NULL
+  `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -70,15 +72,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `level`, `name`, `email`, `kelas`, `wali_kelas`, `jurusan`, `no_telp`, `no_telportu`, `tgl_lahir`, `jenis_kelamin`, `alamat`, `password`) VALUES
-(1, '28840', 'siswa', 'I Kadek Dwiki Nusanjaya', 'nusanjaya@gmail.com', 'XII RPL 1', '', '', '09238103', '09831321', '2022-10-09', 'Laki-laki', 'jl. gamias sibanggede', 'hahahah'),
-(2, '28841', 'siswa', 'I ketut jaya', 'jaya@gmail.com', 'XII RPL 1', '', '', '09092138', '09839123', '2022-10-19', 'Laki-laki', 'Jl. rijasa', '123'),
 (3, 'guru1', 'guru', 'Pak joni', 'joni@gmail.com', '', 'XII RPL 1', '', '0870987790', NULL, '2022-10-02', 'L', 'Jl. Kenangan selamanya', '123'),
 (4, 'admin1', 'admin', 'admin budiman', 'admin@gmail.com', NULL, NULL, NULL, '09238103', NULL, '2022-10-05', 'L', 'Jl. tidak diketahui alamatnya', '123'),
-(5, '28830', 'siswa', 'kadekdwiki', 'jaya@gmail.com', 'XII RPL 1', NULL, NULL, '23432432', '2232131', '2022-10-21', 'Laki-laki', 'kkasjdnf sdfaksjdf df', '123'),
-(6, '342423', 'siswa', 'dwiki team', 'nusanjayadwiki@gmail.com', 'XII RPL 1', NULL, NULL, '121231', '23423423', '2022-10-26', 'Laki-laki', 'dfafsdfsd', ''),
-(9, '12312', 'siswa', 'informasi sekolah', '', 'XII RPL 1', NULL, NULL, '1233423423', '23123123', '2022-10-26', 'Perempuan', 'sdfsdfsdf', ''),
-(10, '28890', 'siswa', 'Putu Eka', 'text@gmail.com', 'XII RPL 1', NULL, NULL, '1233423423', '23123123', '2022-10-28', 'Perempuan', 'Br. Cabe darmasaba', ''),
-(11, '12312', 'siswa', 'dwiki', 'dwiki@gmail.com', 'XII RPL 1', NULL, NULL, '1233423423', '23123123', '2022-10-26', 'Perempuan', 'Jl. Keresahan', '');
+(28, '222', 'siswa', 'Adriansyah Kurniawan', 'ryan@gmail.com', 'XII RPL 1', NULL, NULL, '1233423423', '0883231232', '2022-11-20', 'Laki-laki', 'Denpasar', '123'),
+(29, '555', 'siswa', 'Alit Satria Kurniawan', 'satria@gmail.com', 'XII RPL 1', NULL, NULL, '1233423423', '231231', '2022-11-20', 'Laki-laki', 'Dalung', '123'),
+(30, '888', 'siswa', 'I Kadek Dwiki Nusanjaya', 'nusanjayadwiki@gmail.com', 'XII RPL 1', NULL, NULL, '088812312313213', '09831321', '2004-10-08', 'Laki-laki', 'Desa Sibanggede', '123');
 
 --
 -- Indexes for dumped tables
@@ -89,17 +87,18 @@ INSERT INTO `users` (`id`, `username`, `level`, `name`, `email`, `kelas`, `wali_
 --
 ALTER TABLE `kelas`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `wali_kelas` (`wali_kelas`),
-  ADD UNIQUE KEY `kode_kelas` (`kode_kelas`);
+  ADD UNIQUE KEY `kode_kelas` (`kode_kelas`),
+  ADD KEY `kode_kelas_2` (`kode_kelas`),
+  ADD KEY `kode_kelas_4` (`kode_kelas`);
+ALTER TABLE `kelas` ADD FULLTEXT KEY `kode_kelas_3` (`kode_kelas`);
 
 --
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `kelas` (`kelas`),
-  ADD KEY `wali_kelas` (`wali_kelas`),
-  ADD KEY `name` (`name`);
+  ADD UNIQUE KEY `username` (`username`),
+  ADD KEY `kelas` (`kelas`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -109,13 +108,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `kelas`
 --
 ALTER TABLE `kelas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

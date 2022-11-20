@@ -4,7 +4,7 @@
 <!-- Page Heading -->
 <h1 class="h3 mb-2 text-gray-800">Data Kelas</h1>
 <p class="mb-4">Ini Data Kelas SKENSA</p>
-
+<a href="<?= BASE_URL ?>/admin/tambahkelas" class="btn btn-primary text-capitalize my-3"> tambah kelas</a>
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
    <div class="card-header py-3">

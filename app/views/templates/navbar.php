@@ -12,7 +12,7 @@
             <!-- Topbar Navbar -->
             <ul class="navbar-nav d-flex justify-content-between align-items-center w-100">
                <li class="nav-item">
-                  <h3 class="text-primary text-center">SISTEM INFORMASI SEKOLAH SMK NEGERI 1 DENPASAR</h2>
+                  <h3 class="text-primary text-center">SISTEM INFORMASI SEKOLAH</h2>
                </li>
                <!-- Nav Item - User Information -->
                

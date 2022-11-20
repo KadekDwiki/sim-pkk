@@ -105,7 +105,20 @@ class Admin extends Controller{
         $this->view('templates/header', $data);
         $this->view('templates/sidebar', $data);
         $this->view('templates/navbar', $data);
-        $this->view('kelas/index', $data);
+        $this->view('kelas/datakelas', $data);
+        $this->view('templates/footer');
+    }
+
+    public function tambahkelas()
+    {   
+        $data['user'] = $this->model('User_model')->getUserById($_SESSION["user_id"]);
+        $data['title'] = "Data Siswa | " . $data['user']['level'];
+        // $data['datakelas'] = $this->model('User_model')->getUserByClass("XII RPL 1");
+
+        $this->view('templates/header', $data);
+        $this->view('templates/sidebar', $data);
+        $this->view('templates/navbar', $data);
+        $this->view('kelas/tambahkelas', $data);
         $this->view('templates/footer');
     }
 }

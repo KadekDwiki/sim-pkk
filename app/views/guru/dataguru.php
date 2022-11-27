@@ -8,7 +8,6 @@
    <div class="card shadow mb-4">
       <div class="card-header py-3">
          <h6 class="m-0 font-weight-bold text-primary">Data Guru</h6>
-         <a href="<?= BASE_URL ?>/admin/tambahguru" class=" btn btn-primary"><i class="fas fa-plus text-white"></i> Tambah Data</a>
       </div>
       <div class="card-body">
          <div class="table-responsive p-1">
@@ -23,7 +22,6 @@
                      <th>Tanggal lahir</th>
                      <th>Jenis kelamin</th>
                      <th>Alamat</th>
-                     <th>Edit / Hapus</th>
                   </tr>
                </thead>
                <tbody>
@@ -39,10 +37,6 @@
                      <td><?= $data["tgl_lahir"] ?></td>
                      <td><?= $data["jenis_kelamin"] ?></td>
                      <td><?= $data["alamat"] ?></td>
-                     <td>
-                        <a href=""><i class="fas fa-edit fa-lg mr-2 text-warning"></i></a>
-                        <a href=""><i class="fas fa-trash fa-lg text-danger"></i></a>
-                     </td>
                   </tr>
                <?php } ?>
                </tbody>

@@ -83,11 +83,12 @@ class Admin extends Controller{
         }
     }
 
+    // kelola data guru
     public function dataguru()
     {   
         $data['user'] = $this->model('User_model')->getUserById($_SESSION["user_id"]);
         $data['title'] = "Data Siswa | " . $data['user']['level'];
-        // $data['datakelas'] = $this->model('User_model')->getUserByClass("XII RPL 1");
+        $data['dataguru'] = $this->model('Guru_model')->getAllGuru();
 
         $this->view('templates/header', $data);
         $this->view('templates/sidebar', $data);
@@ -96,6 +97,20 @@ class Admin extends Controller{
         $this->view('templates/footer');
     }
 
+    public function tambahguru()
+    {   
+        $data['user'] = $this->model('User_model')->getUserById($_SESSION["user_id"]);
+        $data['title'] = "Data Siswa | " . $data['user']['level'];
+        $data['dataguru'] = $this->model('Guru_model')->getAllGuru();
+
+        $this->view('templates/header', $data);
+        $this->view('templates/sidebar', $data);
+        $this->view('templates/navbar', $data);
+        $this->view('guru/tambahguru', $data);
+        $this->view('templates/footer');
+    }
+
+    // kelola kelas
     public function datakelas()
     {   
         $data['user'] = $this->model('User_model')->getUserById($_SESSION["user_id"]);

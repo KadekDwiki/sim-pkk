@@ -20,6 +20,7 @@
                         <th>Nama Kelas</th>
                         <th>Wali Kelas</th>
                         <th>Jurusan</th>
+                        <th width="80">Action</th>
                      </tr>
                </thead>
                <tbody>
@@ -29,6 +30,10 @@
                         <td>RPL</td>
                         <td>Rusmi</td>
                         <td>RPL</td>
+                        <td>
+                           <a href=""><i class="fas fa-edit fa-lg mr-2 text-warning"></i></a>
+                           <a href=""><i class="fas fa-trash fa-lg text-danger"></i></a>
+                        </td>
                      </tr>
                      <tr>
                         <td>2</td>
@@ -36,6 +41,10 @@
                         <td>TKJ</td>
                         <td>Rusmi</td>
                         <td>TKJ</td>
+                        <td>
+                           <a href=""><i class="fas fa-edit fa-lg mr-2 text-warning"></i></a>
+                           <a href=""><i class="fas fa-trash fa-lg text-danger"></i></a>
+                        </td>
                      </tr>
                      <tr>
                         <td>3</td>
@@ -43,6 +52,10 @@
                         <td>MM</td>
                         <td>Rusmi</td>
                         <td>MM</td>
+                        <td>
+                           <a href=""><i class="fas fa-edit fa-lg mr-2 text-warning"></i></a>
+                           <a href=""><i class="fas fa-trash fa-lg text-danger"></i></a>
+                        </td>
                      </tr>
                      <tr>
                         <td>4</td>
@@ -50,6 +63,10 @@
                         <td>TKRO</td>
                         <td>Rusmi</td>
                         <td>TKRO</td>
+                        <td>
+                           <a href=""><i class="fas fa-edit fa-lg mr-2 text-warning"></i></a>
+                           <a href=""><i class="fas fa-trash fa-lg text-danger"></i></a>
+                        </td>
                      </tr>
                      <tr>
                         <td>5</td>
@@ -57,27 +74,43 @@
                         <td>TP</td>
                         <td>Rusmi</td>
                         <td>TP</td>
+                        <td>
+                           <a href=""><i class="fas fa-edit fa-lg mr-2 text-warning"></i></a>
+                           <a href=""><i class="fas fa-trash fa-lg text-danger"></i></a>
+                        </td>
                      </tr>
                      <tr>
                         <td>6</td>
                         <td>206</td>
                         <td>TBSM</td>
                         <td>Rusmi</td>
-                        <td>TBSM</td>                     
+                        <td>TBSM</td>   
+                        <td>
+                           <a href=""><i class="fas fa-edit fa-lg mr-2 text-warning"></i></a>
+                           <a href=""><i class="fas fa-trash fa-lg text-danger"></i></a>
+                        </td>                  
                      </tr>
                      <tr>
                         <td>7</td>
                         <td>207</td>
                         <td>BKP</td>
                         <td>Rusmi</td>
-                        <td>BKP</td>                     
+                        <td>BKP</td>
+                        <td>
+                           <a href=""><i class="fas fa-edit fa-lg mr-2 text-warning"></i></a>
+                           <a href=""><i class="fas fa-trash fa-lg text-danger"></i></a>
+                        </td>                     
                      </tr>
                      <tr>
                         <td>8</td>
                         <td>208</td>
                         <td>DPIB</td>
                         <td>Rusmi</td>
-                        <td>DPIB</td>                     
+                        <td>DPIB</td>
+                        <td>
+                           <a href=""><i class="fas fa-edit fa-lg mr-2 text-warning"></i></a>
+                           <a href=""><i class="fas fa-trash fa-lg text-danger"></i></a>
+                        </td>                  
                      </tr>
                      <tr>                    
                      </tr>

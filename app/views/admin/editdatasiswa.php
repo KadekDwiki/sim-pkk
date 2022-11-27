@@ -1,7 +1,6 @@
                   <div class="container-fluid col-lg-12">
                <a href="<?= BASE_URL ?>/admin/datasiswa" class="mb-5">Back</a>
                <h1 class="h3 mb-2 text-gray-800 text-capitalize mt-3">edit data siswa </h1>
-               <?= $data['datasiswa']['password'] ?>
                <form class="my-4 d-flex" method="POST" action="<?= BASE_URL ?>/admin/updatesiswa/<?= $data['datasiswa']['id'] ?>">
                   <div class="col-lg-6">
                      <input type="text" value="siswa" name="level" hidden>

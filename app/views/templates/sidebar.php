@@ -2,7 +2,7 @@
 <!-- Sidebar -->
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
    <!-- Sidebar - Brand -->
-   <a class="sidebar-brand d-flex align-items-center justify-content-start" href="index.html">
+   <a class="sidebar-brand d-flex align-items-center justify-content-start" href="">
       <div class="sidebar-brand-icon">
          <img src="<?= BASE_URL ?>/assets/img/logo skensa.png" alt="" class="icon-image">
       </div>
